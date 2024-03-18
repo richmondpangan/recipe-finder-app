@@ -1,0 +1,127 @@
+.detail-wrapper {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+}
+
+.img-container,
+.info-container {
+    flex: 1;
+}
+
+.img-container h2 {
+    margin-bottom: 1.5rem;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+}
+
+.button-container button {
+    padding: 1rem 2rem;
+    color: #313131;
+    background: white;
+    border: 2px solid black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #f0f0f0;
+}
+
+.button.active {
+    background: linear-gradient(35deg, #494949, #313131);
+    color: white;
+}
+
+.summary-container {
+    margin-top: 2rem;
+}
+
+.summary {
+    margin-bottom: 2rem;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+.instructions-container {
+    margin-top: 2rem;
+}
+
+.instruction {
+    margin-bottom: 2rem;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+.ingredients-container {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+.ingredient {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+@media (max-width:605px) {
+    .button-container {
+        column-gap: 0.5rem;
+    }
+    
+    .button-container button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .summary {
+        font-size: 0.8rem;
+    }
+    
+    .instruction {
+        font-size: 0.8rem;
+    }
+    
+    .ingredient {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:440px) {
+    .button-container {
+        column-gap: 0.5rem;
+    }
+    
+    .button-container button {
+        padding: 0.5rem 1rem;
+        font-size: 0.5rem;
+    }
+    
+    .summary {
+        font-size: 0.5rem;
+        line-height: 1.2rem;
+    }
+    
+    .instruction {
+        font-size: 0.5rem;
+        line-height: 1.2rem;
+    }
+    
+    .ingredient {
+        font-size: 0.5rem;
+        line-height: 1.2rem;
+    }
+}
