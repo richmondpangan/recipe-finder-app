@@ -10,17 +10,17 @@ function Searched() {
 
     const getSearched = async (name) => {
 
-        const check = localStorage.getItem(name);
+        const check = localStorage.getItem(`search_${name}`);
 
         // Check if there is an item in local storage; fetch data if there is nothing and store in local storage
         if (check) {
-            setCuisine(JSON.parse(check));
+            setSearchedRecipes(JSON.parse(check));
         }
         else { 
             const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${import.meta.env.VITE_REACT_APP_API_KEY}&query=${name}`);
             const recipes  = await data.json();
 
-            localStorage.setItem(name, JSON.stringify(recipes.results));
+            localStorage.setItem(`search_${name}`, JSON.stringify(recipes.results));
             setSearchedRecipes(recipes.results);
         }
     }
