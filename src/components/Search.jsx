@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import {useState} from "react";
 import {FaSearch} from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import "../css/Home.css"
 
 function Search() {
 
@@ -14,17 +14,17 @@ function Search() {
     }
 
   return (
-    <FormStyle onSubmit={submitHandler}>
+    <form className="form-style" onSubmit={submitHandler}>
         <div>
             <FaSearch></FaSearch>
             <input type="text" onChange={(e) => setInput(e.target.value)} value={input} />
         </div>
-    </FormStyle>
+    </form>
   )
 }
 
-const FormStyle = styled.form`
-    margin: 0rem 20rem;
+/* const FormStyle = styled.form`
+    margin: 0rem 10rem;
 
     div {
         width: 100%;
@@ -50,6 +50,6 @@ const FormStyle = styled.form`
         transform: translate(100%, -50%);
         color: white;
     }
-`
+`; */
 
 export default Search

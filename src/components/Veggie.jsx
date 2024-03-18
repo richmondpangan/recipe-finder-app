@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import {Splide, SplideSlide} from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import { Link } from "react-router-dom";
+import "../css/Home.css"
 
 function Veggie() {
 
@@ -32,37 +32,67 @@ function Veggie() {
 
   };
 
+  const [cardPerPage, setCardPerPage] = useState(3); // Initial perPage value
+  const [gapPerCard, setGapPerCard] = useState("3.5rem"); // Initial gap value
+
+  // Function to update card display per page based on screen width
+  const updateCardPerPage = () => {
+    if ((window.innerWidth < 768)) {
+      setCardPerPage(3);
+      setGapPerCard("1.5rem");
+    }
+    else if (window.innerWidth < 1200) {
+      setCardPerPage(3);
+      setGapPerCard("2.5rem");
+    }
+    else {
+      setCardPerPage(3); // Set cardPerPage to 4 on larger screens
+      setGapPerCard("3.5rem");
+    }
+  };
+
+  useEffect(() => {
+    // Call the updateCardPerPage function initially and add event listener for screen resize
+    updateCardPerPage();
+    window.addEventListener("resize", updateCardPerPage);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", updateCardPerPage);
+    };
+  }, []);
+
   return (
     <div>
-      <Wrapper>
+      <div className="veggie-wrapper">
         <h3>Vegetarian Picks</h3>
         <Splide options={{
-          perPage: 3,
+          perPage: cardPerPage,
           arrows: false,
           pagination: false,
           drag: "free",
-          gap: "5rem"
+          gap: gapPerCard
         }}>
           {veggie.map((recipe) => {
             return(
               <SplideSlide key={recipe.id}>
-                <Card>
+                <div className="veggie-card">
                   <Link to={'/recipe/' + recipe.id}>
                     <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />
-                    <Gradient />
+                    <div className="veggie-gradient" />
                   </Link>
-                </Card>
+                </div>
               </SplideSlide>
             );
           })}
         </Splide>
-      </Wrapper>
+      </div>
     </div>
   );
 }
 
-const Wrapper = styled.div`
+/* const Wrapper = styled.div`
   margin: 4rem 0rem;
 `;
 
@@ -105,6 +135,6 @@ const Gradient = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
-`;
+`; */
 
 export default Veggie

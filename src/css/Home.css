@@ -1,0 +1,424 @@
+/* Logo */
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 0.4rem;
+}
+
+.nav {
+    padding: 4rem 0rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav svg {
+    font-size: 2rem;
+}
+
+@media (max-width:1024px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .nav svg {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width:768px) {    
+    .logo {
+        font-size: 1.1rem;
+    }
+    
+    .nav svg {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width:431px) {
+    .nav {
+        padding: 1.5rem 0rem;
+    }
+
+    .logo {
+        font-size: 0.8rem;
+    }
+    
+    .nav svg {
+        font-size: 1.4rem;
+    }
+}
+
+/* Search Bar CSS */
+
+.form-style {
+    margin: 0% 10%;
+}
+
+.form-style div {
+    width: 100%;
+    position: relative;
+}
+
+.form-style input {
+    border: none;
+    background: linear-gradient(35deg, #494949, #313131);
+    font-size: 1.1rem;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    width: 100%;
+}
+
+.form-style svg {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(100%, -50%);
+    color: white;
+}
+
+@media (max-width:1200px) {
+    .form-style input {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:1024px) {
+    .form-style input {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:768px) {    
+    .form-style input {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:431px) {
+    .form-style input {
+        padding: 0.4rem 1.5rem;
+        font-size: 0.5rem;
+    }
+
+    .form-style svg {
+        font-size: 0.5rem;
+    }
+}
+
+/* Cuisine Category List */
+
+.cuisine-list {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 2rem;
+    text-decoration: none;
+    background: linear-gradient(35deg, #494949, #313131);
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.list-item h4 {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.list-item svg {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.list-item.active {
+    background: linear-gradient(to right, #f27121, #e94057);
+}
+
+.list-item.active h4 {
+    color: white;
+}
+
+.list-item.active svg {
+    color: white;
+}
+
+@media (max-width:1024px) {
+    .list-item {
+        margin-right: 1.8rem;
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .list-item h4 {
+        font-size: 0.7rem;
+    }
+    
+    .list-item svg {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:768px) {    
+    .list-item {
+        margin-right: 1rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .list-item h4 {
+        font-size: 0.5rem;
+    }
+    
+    .list-item svg {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:431px) {
+    .cuisine-list {
+        margin: 0.8rem 0rem;
+    }
+
+    .list-item {
+        margin-right: 0.3rem;
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .list-item h4 {
+        font-size: 0.3rem;
+    }
+    
+    .list-item svg {
+        font-size: 0.7rem;
+    }
+}
+
+/* Popular Component */
+
+.popular-wrapper {
+    margin: 4rem 0rem;
+}
+
+.popular-wrapper h3 {
+    font-size: 1.5rem;
+    color: black;
+    line-height: 2.5rem;
+    margin: 2rem 0rem;
+}
+
+.popular-card {
+    min-height: 10rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.popular-card img {
+    border-radius: 2rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popular-card p {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, 0%);
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.7rem;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular-gradient {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+
+@media (max-width:1200px) {
+    .popular-wrapper h3 {
+        font-size: 1.3rem;
+    }
+
+    .popular-card {
+        min-height: 10rem;
+    }
+    
+    .popular-card p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:768px) {
+    .popular-wrapper h3 {
+        font-size: 1rem;
+        margin: 1rem 0rem;
+    }
+
+    .popular-card {
+        min-height: 7rem;
+    }
+    
+    .popular-card p {
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width:431px) {
+    .popular-wrapper {
+        margin: 0.2rem 0rem 1rem 0rem;
+    }
+
+    .popular-wrapper h3 {
+        font-size: 0.6rem;
+        margin: 0rem 0rem 0.4rem 0rem;
+    }
+
+    .popular-card {
+        min-height: 5rem;
+        border-radius: 1rem;
+    }
+
+    .popular-card img {
+        border-radius: 1rem;
+    }
+    
+    .popular-card p {
+        font-size: 0.35rem;
+    }
+}
+
+/* Veggie Component */
+
+.veggie-wrapper {
+    margin: 4rem 0rem;
+}
+
+.veggie-wrapper h3 {
+    font-size: 1.5rem;
+    color: black;
+    line-height: 2.5rem;
+    margin: 2rem 0rem;
+}
+
+.veggie-card {
+    min-height: 16rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.veggie-card img {
+    border-radius: 2rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.veggie-card p {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, 0%);
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.veggie-gradient {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+
+@media (max-width:1200px) {
+    .veggie-wrapper h3 {
+        font-size: 1.3rem;
+    }
+
+    .veggie-card {
+        min-height: 14rem;
+    }
+    
+    .veggie-card p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:768px) {
+    .veggie-wrapper h3 {
+        font-size: 1rem;
+        margin: 1rem 0rem;
+    }
+
+    .veggie-card {
+        min-height: 10rem;
+    }
+    
+    .veggie-card p {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width:431px) {
+    .veggie-wrapper {
+        margin: 1rem 0rem;
+    }
+
+    .veggie-wrapper h3 {
+        font-size: 0.6rem;
+        margin: 0.4rem 0rem;
+    }
+
+    .veggie-card {
+        min-height: 7rem;
+        border-radius: 1rem;
+    }
+
+    .veggie-card img {
+        border-radius: 1rem;
+    }
+    
+    .veggie-card p {
+        font-size: 0.35rem;
+    }
+}

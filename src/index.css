@@ -6,7 +6,7 @@
 }
 
 body {
-    margin: 0% 20%;
+    margin: 0% 10%;
 }
 
 h4 {
@@ -14,12 +14,14 @@ h4 {
     color: black;
 }
 
+/*
 h3 {
     font-size: 1.5rem;
     color: black;
     line-height: 2.5rem;
     margin: 2rem 0rem;
 }
+*/
 
 a {
     color: black;
