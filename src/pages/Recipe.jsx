@@ -5,7 +5,7 @@ import "../css/Recipe.css"
 function Recipe() {
 
     const [details, setDetails] = useState({});
-    const [activeTab, setActiveTab] = useState("instructions");
+    const [activeTab, setActiveTab] = useState("summary");
     let params = useParams();
 
     const fetchDetails = async () => {

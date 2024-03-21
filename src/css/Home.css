@@ -65,9 +65,9 @@
 
 .form-style input {
     border: none;
-    background: linear-gradient(35deg, #494949, #313131);
+    background: #f5f5f5;
     font-size: 1.1rem;
-    color: white;
+    color: #333333;
     padding: 1rem 3rem;
     border: none;
     border-radius: 1rem;
@@ -80,7 +80,7 @@
     top: 50%;
     left: 0%;
     transform: translate(100%, -50%);
-    color: white;
+    color: #333333;
 }
 
 @media (max-width:1200px) {
@@ -121,40 +121,48 @@
 }
 
 .list-item {
+
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 20%;
     margin-right: 2rem;
     text-decoration: none;
-    background: linear-gradient(35deg, #494949, #313131);
-    width: 6rem;
-    height: 6rem;
+    background: #f5f5f5;
+    width: 4.8rem;
+    height: 4.8rem;
     cursor: pointer;
-    transform: scale(0.8);
+    transition: background-color 0.3s ease;
 }
 
 .list-item h4 {
-    color: white;
+    position: absolute;
+    bottom: -1.5rem;
+    color: #333333;
     font-size: 0.8rem;
 }
 
 .list-item svg {
-    color: white;
+    color: #333333;
     font-size: 1.5rem;
 }
 
+.list-item:hover {
+    background-color: #b7f7d7;
+}
+
 .list-item.active {
-    background: linear-gradient(to right, #f27121, #e94057);
+    background: linear-gradient(135deg, #b7f7d7, #a8e6cf);
 }
 
 .list-item.active h4 {
-    color: white;
+    color: #4bc944;
 }
 
 .list-item.active svg {
-    color: white;
+    color: #333333;
 }
 
 @media (max-width:1024px) {
@@ -236,6 +244,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .popular-card p {
@@ -261,6 +270,11 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+
+.popular-card:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width:1200px) {
@@ -343,6 +357,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .veggie-card p {
@@ -368,6 +383,11 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+
+.veggie-card:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width:1200px) {
