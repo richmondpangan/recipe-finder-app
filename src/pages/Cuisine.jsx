@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Link, useParams} from 'react-router-dom';
+import {motion} from "framer-motion";
 import "../css/Searched.css";
 
 function Cuisine() {
@@ -30,11 +31,11 @@ function Cuisine() {
     },[params.type])
 
   return (
-    <div className='grid'
+    <motion.div className='grid'
         animate={{opacity: 1}}
         initial={{opacity: 0}}
         exit={{opacity: 0}}
-        transition={{duration: 0.5}}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       {cuisine.map((item) => {
         return(
@@ -47,7 +48,7 @@ function Cuisine() {
             </div>
         );
       })}
-    </div>
+    </motion.div>
   )
 }
 

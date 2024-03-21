@@ -6,7 +6,7 @@ import Dessert from "../components/Dessert";
 import Drink from "../components/Drink";
 import {motion} from "framer-motion";
 
-import React from 'react'
+import React from 'react';
 
 function Home() {
   return (
@@ -14,7 +14,7 @@ function Home() {
       animate={{opacity: 1}}
       initial={{opacity: 0}}
       exit={{opacity: 0}}
-      transition={{duration: 0.5}}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <Popular />
       <MainCourse />

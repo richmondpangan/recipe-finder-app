@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "../css/Recipe.css"
+import {motion} from "framer-motion";
+import "../css/Recipe.css";
 
 function Recipe() {
 
@@ -29,7 +30,12 @@ function Recipe() {
     },[params.name]);
 
   return (
-    <div className="detail-wrapper">
+    <motion.div className="detail-wrapper"
+      animate={{opacity: 1}}
+      initial={{opacity: 0}}
+      exit={{opacity: 0}}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
       <div className="img-container">
         <h2>{details.title}</h2>
         <img src={details.image} alt={details.title} />
@@ -73,7 +79,7 @@ function Recipe() {
           </ul>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
