@@ -112,6 +112,15 @@
 }
 
 @media (max-width:440px) {
+    .detail-wrapper {
+        margin-top: 2.5rem;
+    }
+
+    .img-container h2 {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
     .button-container {
         column-gap: 0.5rem;
     }

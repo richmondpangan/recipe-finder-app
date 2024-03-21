@@ -42,6 +42,7 @@ function Cuisine() {
                 <Link to={'/recipe/' + item.id}>
                     <img src={item.image} alt={item.title} />
                     <h4>{item.title}</h4>
+                    <div className='card-gradient' />
                 </Link>
             </div>
         );
