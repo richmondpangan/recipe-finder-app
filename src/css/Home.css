@@ -330,27 +330,27 @@
     }
 }
 
-/* Veggie Component */
+/* Main Course Component */
 
-.veggie-wrapper {
+.main-course-wrapper {
     margin: 4rem 0rem;
 }
 
-.veggie-wrapper h3 {
+.main-course-wrapper h3 {
     font-size: 1.5rem;
     color: black;
     line-height: 2.5rem;
     margin: 2rem 0rem;
 }
 
-.veggie-card {
+.main-course-card {
     min-height: 16rem;
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
 }
 
-.veggie-card img {
+.main-course-card img {
     border-radius: 2rem;
     position: absolute;
     left: 0;
@@ -360,7 +360,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.veggie-card p {
+.main-course-card p {
     position: absolute;
     z-index: 10;
     left: 50%;
@@ -377,7 +377,7 @@
     align-items: center;
 }
 
-.veggie-gradient {
+.main-course-gradient {
     z-index: 3;
     position: absolute;
     width: 100%;
@@ -385,60 +385,60 @@
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
 }
 
-.veggie-card:hover img {
+.main-course-card:hover img {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width:1200px) {
-    .veggie-wrapper h3 {
+    .main-course-wrapper h3 {
         font-size: 1.3rem;
     }
 
-    .veggie-card {
+    .main-course-card {
         min-height: 14rem;
     }
     
-    .veggie-card p {
+    .main-course-card p {
         font-size: 0.7rem;
     }
 }
 
 @media (max-width:768px) {
-    .veggie-wrapper h3 {
+    .main-course-wrapper h3 {
         font-size: 1rem;
         margin: 1rem 0rem;
     }
 
-    .veggie-card {
+    .main-course-card {
         min-height: 10rem;
     }
     
-    .veggie-card p {
+    .main-course-card p {
         font-size: 0.5rem;
     }
 }
 
 @media (max-width:431px) {
-    .veggie-wrapper {
+    .main-course-wrapper {
         margin: 1rem 0rem;
     }
 
-    .veggie-wrapper h3 {
+    .main-course-wrapper h3 {
         font-size: 0.6rem;
         margin: 0.4rem 0rem;
     }
 
-    .veggie-card {
+    .main-course-card {
         min-height: 7rem;
         border-radius: 1rem;
     }
 
-    .veggie-card img {
+    .main-course-card img {
         border-radius: 1rem;
     }
     
-    .veggie-card p {
+    .main-course-card p {
         font-size: 0.35rem;
     }
 }
