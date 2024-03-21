@@ -1,5 +1,5 @@
-import Veggie from "../components/Veggie";
 import Popular from "../components/Popular";
+import MainCourse from "../components/MainCourse";
 import {motion} from "framer-motion";
 
 import React from 'react'
@@ -13,7 +13,7 @@ function Home() {
       transition={{duration: 0.5}}
     >
       <Popular />
-      <Veggie />
+      <MainCourse />
     </motion.div>
   );
 }
