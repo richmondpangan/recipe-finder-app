@@ -27,22 +27,33 @@
 }
 
 .button-container button {
+    position: relative;
+    text-decoration: none;
+    color:  #313131;
+    border: none;
+    background-color: white;
     padding: 1rem 2rem;
-    color: #313131;
-    background: white;
-    border: 2px solid black;
-    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
 }
 
-.button-container button:hover {
-    background-color: #f0f0f0;
+.button-container button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
 }
 
-.button.active {
-    background: linear-gradient(35deg, #494949, #313131);
-    color: white;
+.button-container button:hover::before {
+    width: 100%;
+}
+
+.button.active::before {
+    width: 100%;
 }
 
 .summary-container {
