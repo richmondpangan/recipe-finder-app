@@ -64,7 +64,7 @@ function MainCourse() {
 
   return (
     <div>
-      <div className="main-course-wrapper">
+      <div className="menu-wrapper">
         <h3>Main Course</h3>
         <Splide options={{
           perPage: cardPerPage,
@@ -76,11 +76,11 @@ function MainCourse() {
           {mainCourse.map((recipe) => {
             return(
               <SplideSlide key={recipe.id}>
-                <div className="main-course-card">
+                <div className="menu-card">
                   <Link to={'/recipe/' + recipe.id}>
                     <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />
-                    <div className="main-course-gradient" />
+                    <div className="menu-gradient" />
                   </Link>
                 </div>
               </SplideSlide>
