@@ -22,7 +22,7 @@ function Popular() {
       setPopular(JSON.parse(check));
     }
     else {
-      const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${import.meta.env.VITE_REACT_APP_API_KEY}&number=10`);
+      const api = await fetch(`http://api.spoonacular.com/recipes/random?apiKey=${import.meta.env.VITE_REACT_APP_API_KEY}&number=10`);
       const data = await api.json();
 
       localStorage.setItem('popular', JSON.stringify(data.recipes));
