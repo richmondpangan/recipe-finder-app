@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <div className="nav">
           <GiCook />
-          <Link to={'/'} className="logo">Food Recipe</Link>
+          <Link to={'/recipe-finder-app/'} className="logo">Food Recipe</Link>
         </div>
         <Search />
         <Category />

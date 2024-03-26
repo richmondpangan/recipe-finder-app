@@ -40,7 +40,7 @@ function Cuisine() {
       {cuisine.map((item) => {
         return(
             <div className='card' key={item.id}>
-                <Link to={'/recipe/' + item.id}>
+                <Link to={'/recipe-finder-app/recipe/' + item.id}>
                     <img src={item.image} alt={item.title} />
                     <h4>{item.title}</h4>
                     <div className='card-gradient' />
