@@ -9,6 +9,10 @@ body {
     margin: 0% 10%;
 }
 
+h3 {
+    font-weight: 600;
+}
+
 a {
     color: black;
 }

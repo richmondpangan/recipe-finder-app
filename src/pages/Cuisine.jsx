@@ -17,7 +17,7 @@ function Cuisine() {
             setCuisine(JSON.parse(check));
         }
         else { 
-            const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${import.meta.env.VITE_REACT_APP_API_KEY}&cuisine=${name}&number=12`);
+            const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${import.meta.env.VITE_REACT_APP_API_KEY}&cuisine=${name}&number=15`);
             const recipes  = await data.json();
 
             localStorage.setItem(name, JSON.stringify(recipes.results));

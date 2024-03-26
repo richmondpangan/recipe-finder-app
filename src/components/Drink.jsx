@@ -22,12 +22,21 @@ function Drink() {
         setDrink(JSON.parse(check));
       }
       else {
-        const api = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${import.meta.env.VITE_REACT_APP_API_KEY}&query=drink&number=10`);
+        const api = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${import.meta.env.VITE_REACT_APP_API_KEY}&query=drink&number=20`);
         const data = await api.json();
-  
-        localStorage.setItem('drink', JSON.stringify(data.results));
-        setDrink(data.results);
-        console.log(data.results);
+
+        // Select a 10 random subset of recipes
+        const randomRecipes = getRandomSubset(data.results, 10);
+
+        // Select a random subset from an array
+        function getRandomSubset(array, size) {
+          const shuffled = array.sort(() => 0.5 - Math.random());
+          return shuffled.slice(0, size);
+        }
+
+        localStorage.setItem('drink', JSON.stringify(randomRecipes));
+        setDrink(randomRecipes);
+        console.log(randomRecipes);
       }
   
     };
