@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import "../css/Home.css"
 
 function Popular() {
+
+  console.log("API key:", import.meta.env.VITE_REACT_APP_API_KEY);
+  
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
