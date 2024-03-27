@@ -9,23 +9,23 @@ import "../css/Home.css"
 function Category() {
   return (
     <div className="cuisine-list">
-      <NavLink to={'/recipe-finder-app/cuisine/American'} className="list-item">
+      <NavLink to={'/cuisine/American'} className="list-item">
         <GiHamburger />
         <h4>American</h4>
       </NavLink>
-      <NavLink to={'/recipe-finder-app/cuisine/Chinese'} className="list-item">
+      <NavLink to={'/cuisine/Chinese'} className="list-item">
         <GiNoodles />
         <h4>Chinese</h4>
       </NavLink>
-      <NavLink to={'/recipe-finder-app/cuisine/Italian'} className="list-item">
+      <NavLink to={'/cuisine/Italian'} className="list-item">
         <FaPizzaSlice />
         <h4>Italian</h4>
       </NavLink>
-      <NavLink to={'/recipe-finder-app/cuisine/Japanese'} className="list-item">
+      <NavLink to={'/cuisine/Japanese'} className="list-item">
         <GiSushis />
         <h4>Japanese</h4>
       </NavLink>
-      <NavLink to={'/recipe-finder-app/cuisine/Mexican'} className="list-item">
+      <NavLink to={'/cuisine/Mexican'} className="list-item">
         <GiTacos />
         <h4>Mexican</h4>
       </NavLink>

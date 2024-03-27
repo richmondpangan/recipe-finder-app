@@ -86,7 +86,7 @@ function MainCourse() {
             return(
               <SplideSlide key={recipe.id}>
                 <div className="menu-card">
-                  <Link to={'/recipe-finder-app/recipe/' + recipe.id}>
+                  <Link to={'/recipe/' + recipe.id}>
                     <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />
                     <div className="menu-gradient" />

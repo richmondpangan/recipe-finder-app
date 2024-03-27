@@ -10,7 +10,7 @@ function Search() {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        navigate('/recipe-finder-app/searched/' + input);
+        navigate('/searched/' + input);
     }
 
   return (
