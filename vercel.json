@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/recipe-finder-app/(.*)", 
-            "destination": "/recipe-finder-app/index.html"
+            "source": "/(.*)", 
+            "destination": "/"
         }
     ]
 }
