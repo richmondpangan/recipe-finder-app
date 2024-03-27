@@ -9,7 +9,6 @@ import {motion} from "framer-motion";
 import React from 'react';
 
 function Home() {
-  console.log(import.meta.env.VITE_REACT_APP_API_KEY);
   return (
     <motion.div
       animate={{opacity: 1}}

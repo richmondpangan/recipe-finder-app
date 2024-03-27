@@ -4,10 +4,7 @@ import '@splidejs/react-splide/css';
 import { Link } from "react-router-dom";
 import "../css/Home.css"
 
-function Popular() {
-
-  console.log("API key:", import.meta.env.VITE_REACT_APP_API_KEY);
-  
+function Popular() {  
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
